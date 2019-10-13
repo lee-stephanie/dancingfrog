@@ -47,7 +47,7 @@ player.character.click(function() { //med
 
 	console.log($(this))
 	$(this).animate({
-	'left' : (playerPosition+=50) +'px'
+	'left' : (playerPosition+=60) +'px'
 	})
 
 	console.log('this is the current value of player position: ' + playerPosition)
@@ -62,7 +62,7 @@ player.character.click(function() { //hard
 
 	console.log($(this))
 	$(this).animate({
-	'left' : (playerPosition+=50) +'px'
+	'left' : (playerPosition+=60) +'px'
 	})
 
 	console.log('this is the current value of player position: ' + playerPosition)
@@ -88,7 +88,6 @@ const aiMove = () => {
 
 		} else { 
 			
-			ai.character.css('left', '0px')
 			return true
 
 
@@ -118,7 +117,7 @@ const aiMed = () => { //med
 		if(ai.aiPos <= 700) {
 
 			ai.character.animate({
-			'left' : (aiPosition+=60) +'px'
+			'left' : (aiPosition+=50) +'px'
 
 			})
 
@@ -158,7 +157,7 @@ const aiHard = () => { //hard
 
 		if(ai.aiPos <= 1000) {
 			ai.character.animate({
-				'left' : (aiPosition+=70) +'px'
+				'left' : (aiPosition+=60) +'px'
 
 			})
 
@@ -171,7 +170,7 @@ const aiHard = () => { //hard
 		}
 			console.log(ai.aiPos)
 			ai.aiPos = aiPosition
-			setTimeout(aiHard, 700)
+			setTimeout(aiHard, 600)
 			resulthard()
 
 		
